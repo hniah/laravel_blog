@@ -1,19 +1,31 @@
+
 const elixir = require('laravel-elixir');
 
 require('laravel-elixir-vue-2');
 
-/*
- |--------------------------------------------------------------------------
- | Elixir Asset Management
- |--------------------------------------------------------------------------
- |
- | Elixir provides a clean, fluent API for defining some basic Gulp tasks
- | for your Laravel application. By default, we are compiling the Sass
- | file for your application as well as publishing vendor resources.
- |
- */
+// var paths = {
+//     'jquery': './vendor/bower_components/jquery/',
+//     'bootstrap': './vendor/bower_components/bootstrap-sass/assets/'
+// }
 
-elixir((mix) => {
-    mix.sass('app.scss')
-       .webpack('app.js');
+var bower_path = "./vendor/bower_components";
+var paths = {
+  'jquery'     : bower_path + "/jquery/dist",
+  'bootstrap'  : bower_path + "/bootstrap-sass/assets",
+};
+
+/*mix.sass("app.scss", "public/assets/css", {
+  includePaths: [
+    paths.bootstrap + '/stylesheets',
+    paths.fontawesome + '/scss'
+  ]
+});*/
+
+elixir(function(mix) {
+    mix.sass("app.scss", 'public/css/', null, {includePaths: [paths.bootstrap + '/stylesheets']})
+        .scripts([
+            paths.jquery + "/jquery.js",
+            paths.bootstrap + "/javascripts/bootstrap.js",
+        ],'public/js/app.js');
 });
+

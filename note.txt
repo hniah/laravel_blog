@@ -6,3 +6,21 @@ Migration:
 Seed
 	php artisan make:seeder UsersTableSeeder	:create seeder
 	php artisan db:seed		: run seed
+	
+	
+Convert Laravel 5's Frontend Scaffold to Bower: https://mattstauffer.co/blog/convert-laravel-5-frontend-scaffold-to-bower
+	INIT
+		npm install --global gulp
+		Add bower.json
+		Add .bowerrc
+	Install dependencies
+		$ npm install -g bower
+		$ bower install bootstrap --save
+		$ bower install jquery --save
+		
+	SASS install
+		1.	bower install bootstrap-sass-official --save: default install jquery
+		2. edit gulpfile.js: include file or directory you want to complie (default root path is resource/assets, so if you want to add other files in vendor, you need to set path)
+		3. gulp :run command gulp to commpile assets
+		
+		
