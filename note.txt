@@ -1,0 +1,8 @@
+Migration:
+	php artisan make:migration create_users_table
+	php artisan migrate: 	run migration
+	php artisan migrate:rollback	: migration rollback
+	
+Seed
+	php artisan make:seeder UsersTableSeeder	:create seeder
+	php artisan db:seed		: run seed
