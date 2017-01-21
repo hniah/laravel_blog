@@ -20,6 +20,9 @@ elixir(function(mix) {
             paths.bootstrap + "javascripts/bootstrap.js"
         ], 'public/js/app.js');
 
+    // Copy flag resources
+    mix.copy('./vendor/bower_components/flag-sprites/dist/css/flag-sprites.min.css', 'public/css/flags.css');
+    mix.copy('./vendor/bower_components/flag-sprites/dist/img/flags.png', 'public/img/flags.png');
 
      // Merge Admin CSSs.
     mix.styles([
@@ -27,6 +30,8 @@ elixir(function(mix) {
         paths_admin.adminlte + 'dist/css/skins/skin-blue.min.css',
         paths_admin.adminlte + 'dist/css/AdminLTE.min.css'
     ], 'public/css/admin.css');
+
+    mix.copy('./vendor/bower_components/AdminLTE/dist/img/**', 'public/img');
 
     mix.scripts([
     	paths.jquery + "dist/jquery.js",

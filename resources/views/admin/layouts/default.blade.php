@@ -17,8 +17,6 @@
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
         <!-- Ionicons -->
         <link href="http://code.ionicframework.com/ionicons/2.0.0/css/ionicons.min.css" rel="stylesheet" type="text/css" />
-        <!-- Theme style -->
-        <link href="{{ asset("/bower_components/admin-lte/dist/css/skins/skin-blue.min.css")}}" rel="stylesheet" type="text/css" />
 
          @yield('styles')
     </head>
@@ -132,7 +130,7 @@
                             <!-- Menu Toggle Button -->
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                 <!-- The user image in the navbar-->
-                                <img src="{{ asset("/bower_components/admin-lte/dist/img/user2-160x160.jpg") }}" class="user-image" alt="User Image"/>
+                                <img src="{{ asset("img/user2-160x160.jpg") }}" class="user-image" alt="User Image"/>
                                 <!-- hidden-xs hides the username on small devices so only the image appears. -->
                                 <span class="hidden-xs">Alexander Pierce</span>
                             </a>
@@ -180,7 +178,7 @@
                 <!-- Sidebar user panel (optional) -->
                 <div class="user-panel">
                     <div class="pull-left image">
-                        <img src="{{ asset("/bower_components/admin-lte/dist/img/user2-160x160.jpg") }}" class="img-circle" alt="User Image" />
+                        <img src="{{ asset("img/user2-160x160.jpg") }}" class="img-circle" alt="User Image" />
                     </div>
                     <div class="pull-left info">
                         <p>Alexander Pierce</p>

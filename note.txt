@@ -3,8 +3,10 @@ Migration:
 	php artisan migrate: 	run migration
 	php artisan migrate:rollback	: migration rollback
 	
+	
 Generate: Controller
 	php artisan make:controller DashboardsController --resource
+	php artisan make:model Langauge
 	
 Seed
 	php artisan make:seeder UsersTableSeeder	:create seeder
@@ -16,7 +18,7 @@ Convert Laravel 5's Frontend Scaffold to Bower: https://mattstauffer.co/blog/con
 		npm install --global gulp
 		Add bower.json
 		Add .bowerrc
-	Install dependencies
+	Install dependencies: download bootstrap and jquery and save in vendor/bower_component directory
 		$ npm install -g bower
 		$ bower install bootstrap --save
 		$ bower install jquery --save
@@ -32,3 +34,6 @@ Convert Laravel 5's Frontend Scaffold to Bower: https://mattstauffer.co/blog/con
 		
 Middleware
 	php artisan make:middleware Admin
+	
+HTMl & FORM: install 
+	composer require "laravelcollective/html":"^5.3.0"

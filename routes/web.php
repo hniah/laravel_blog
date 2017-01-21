@@ -24,15 +24,7 @@ Route::get('/home', 'HomeController@index');
 Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function() {
     Route::get('/', 'Admin\DashboardsController@index');
     Route::get('dashboard', 'Admin\DashboardsController@index');
+    Route::resource('languages', 'Admin\LanguagesController');
 });
-Auth::routes();
 
-Route::get('/home', 'HomeController@index');
 
-Auth::routes();
-
-Route::get('/home', 'HomeController@index');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index');
