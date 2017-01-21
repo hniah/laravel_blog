@@ -20,7 +20,7 @@ class Admin
     public function handle($request, Closure $next)
     {
     
-        if(!Auth::check() or $request->user()->admin!=21) {
+        if(!Auth::check() or $request->user()->admin!=1) {
             return redirect('/')->with('message', 'I am so frustrated.');
         }
         return $next($request);

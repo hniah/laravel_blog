@@ -8,6 +8,10 @@ var paths = {
     'bootstrap': './vendor/bower_components/bootstrap-sass/assets/'
 }
 
+var paths_admin = {
+    'adminlte': './vendor/bower_components/AdminLTE/'
+}
+
 elixir(function(mix) {
     mix.sass("app.scss", 'public/css/', null, {includePaths: [paths.bootstrap + 'stylesheets/']})
         .copy(paths.bootstrap + 'fonts/bootstrap/**', 'public/fonts')
@@ -15,4 +19,18 @@ elixir(function(mix) {
             paths.jquery + "dist/jquery.js",
             paths.bootstrap + "javascripts/bootstrap.js"
         ], 'public/js/app.js');
+
+
+     // Merge Admin CSSs.
+    mix.styles([
+        paths_admin.adminlte + 'bootstrap/css/bootstrap.min.css',
+        paths_admin.adminlte + 'dist/css/skins/skin-blue.min.css',
+        paths_admin.adminlte + 'dist/css/AdminLTE.min.css'
+    ], 'public/css/admin.css');
+
+    mix.scripts([
+    	paths.jquery + "dist/jquery.js",
+        paths_admin.adminlte + 'bootstrap/js/bootstrap.min.js',
+        paths_admin.adminlte + 'dist/js/app.min.js'
+    ], 'public/js/admin.js');
 });
