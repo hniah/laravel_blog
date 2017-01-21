@@ -3,6 +3,9 @@ Migration:
 	php artisan migrate: 	run migration
 	php artisan migrate:rollback	: migration rollback
 	
+Generate: Controller
+	php artisan make:controller DashboardsController --resource
+	
 Seed
 	php artisan make:seeder UsersTableSeeder	:create seeder
 	php artisan db:seed		: run seed
@@ -22,5 +25,10 @@ Convert Laravel 5's Frontend Scaffold to Bower: https://mattstauffer.co/blog/con
 		1.	bower install bootstrap-sass-official --save: default install jquery
 		2. edit gulpfile.js: include file or directory you want to complie (default root path is resource/assets, so if you want to add other files in vendor, you need to set path)
 		3. gulp :run command gulp to commpile assets
+	Resource
+		contain source not compile
+	Public
+		contain source after compile
 		
-		
+Middleware
+	php artisan make:middleware Admin

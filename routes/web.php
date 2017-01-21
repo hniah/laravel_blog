@@ -18,3 +18,21 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+
+
+/***************    Admin routes  **********************************/
+Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function() {
+    Route::get('/', 'Admin\DashboardsController@index');
+    Route::get('dashboard', 'Admin\DashboardsController@index');
+});
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');
