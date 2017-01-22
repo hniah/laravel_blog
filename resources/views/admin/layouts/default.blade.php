@@ -197,7 +197,7 @@
                     </div>
                 </form>
                 <!-- /.search form -->
-
+                {!! $AdminNav->asUl() !!}
                 <!-- Sidebar Menu -->
                 <ul class="sidebar-menu">
                     <li class="header">HEADER</li>

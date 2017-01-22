@@ -37,3 +37,6 @@ Middleware
 	
 HTMl & FORM: install 
 	composer require "laravelcollective/html":"^5.3.0"
+	
+Composer
+	composer require lavary/laravel-menu	:add menu package

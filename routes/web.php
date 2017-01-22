@@ -22,7 +22,7 @@ Route::get('/home', 'HomeController@index');
 
 /***************    Admin routes  **********************************/
 Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function() {
-    Route::get('/', 'Admin\DashboardsController@index');
+    Route::get('/', 'Admin\DashboardsController@index')->name('dashboard');;
     Route::get('dashboard', 'Admin\DashboardsController@index');
     Route::resource('languages', 'Admin\LanguagesController');
 });

@@ -180,6 +180,7 @@ return [
 
         /*Install new*/
         Collective\Html\HtmlServiceProvider::class,
+        Lavary\Menu\ServiceProvider::class,
 
 
     ],
@@ -233,6 +234,7 @@ return [
 
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
+        'Menu' => Lavary\Menu\Facade::class,
 
     ],
 
