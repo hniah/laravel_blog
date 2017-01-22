@@ -4,8 +4,8 @@ use App\Http\Controllers\AdminController;
 use App\Language;
 use Illuminate\Http\Request;
 use App\Http\Requests\Admin\LanguageRequest;
-use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Datatables;
 
 class LanguagesController extends AdminController
@@ -20,9 +20,15 @@ class LanguagesController extends AdminController
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $languages = Language::all();
+        //$languages = DB::table('languages')->paginate(5);
+       // $keywords = Input::get('keywords');
+        $keywords = $request->get('keywords');
+        if(empty($keywords))
+            $languages = Language::orderBy('id', 'desc')->paginate(5);
+        else
+            $languages = Language::where('name', 'LIKE', '%'. $keywords .'%')->orderBy('id', 'desc')->paginate(5);
 
         return view('admin.language.index', ['languages' => $languages]);
     }
