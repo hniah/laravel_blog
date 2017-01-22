@@ -13,7 +13,7 @@ class LanguagesController extends AdminController
 
     public function __construct()
     {
-        view()->share('type', 'language');
+        //view()->share('type', 'language');
     }
     /**
      * Display a listing of the resource.

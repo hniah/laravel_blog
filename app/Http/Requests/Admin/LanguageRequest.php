@@ -1,5 +1,5 @@
 <?php namespace App\Http\Requests\Admin;
-
+use Route;
 use Illuminate\Foundation\Http\FormRequest;
 
 class LanguageRequest extends FormRequest {
@@ -11,9 +11,10 @@ class LanguageRequest extends FormRequest {
 	 */
 	public function rules()
 	{
+
 		return [
             'name' => 'required|min:3',
-            'lang_code' => 'required|unique:languages|min:1',
+            'lang_code' => 'required|min:2|unique:languages,lang_code,'.$this->segment(3),
 		];
 	}
 

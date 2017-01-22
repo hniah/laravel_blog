@@ -32,10 +32,10 @@
 	</div>
 	<div class="form-group">
 		<div class="col-md-12">
-			<button type="reset" class="btn btn-sm btn-warning close_popup">
+			<a href="{{ url('admin/languages') }}" class="btn btn-sm btn-warning close_popup">
 				<span class="glyphicon glyphicon-ban-circle"></span> {{
 				trans("admin/modal.cancel") }}
-			</button>
+			</a>
 			<button type="reset" class="btn btn-sm btn-default">
 				<span class="glyphicon glyphicon-remove-circle"></span> {{
 				trans("admin/modal.reset") }}
