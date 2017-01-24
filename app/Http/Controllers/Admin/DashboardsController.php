@@ -16,11 +16,11 @@ class DashboardsController extends AdminController
     {
         $title = "Dashboard";
 
-        // $news = Article::count();
-        // $newscategory = ArticleCategory::count();
-        // $users = User::count();
-        // $photo = Photo::count();
-        // $photoalbum = PhotoAlbum::count(); //,  compact('title','news','newscategory','photo','photoalbum','users')
+        /*$news = Article::count();
+        $newscategory = ArticleCategory::count();
+        $users = User::count();
+        $photo = Photo::count();
+        $photoalbum = PhotoAlbum::count(); //,  compact('title','news','newscategory','photo','photoalbum','users')*/
         return view('admin.dashboard.index', compact('title'));
     }
     /**
